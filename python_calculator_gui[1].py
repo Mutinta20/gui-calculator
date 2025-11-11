@@ -172,7 +172,9 @@ tk.Button(mem_frame, text="MR", width=5, command=memory_recall).grid(row=0, colu
 tk.Button(mem_frame, text="MC", width=5, command=memory_clear).grid(row=0, column=3)
 
 # Exit button (button)
-tk.Button(root, text="Exit", command=root.destroy).pack(pady=10)
+ttk.Button(main_frame, text="Exit", command=root.destroy).grid(row=7, column=0, columnspan=2, pady=10)
+
+entry1.focus_set()
 
 # Run the GUI
 root.mainloop()
