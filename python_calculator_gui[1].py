@@ -160,8 +160,8 @@ history_text.pack()
 tk.Button(root, text="Clear History", command=clear_history).pack(pady=5)
 
 # Memory buttons
-mem_frame = tk.LabelFrame(root, text="Memory Functions")
-mem_frame.pack(pady=10)
+mem_frame = ttk.LabelFrame(main_frame, text="Memory Functions", padding=8)
+mem_frame.grid(row=6, column=0, columnspan=2, pady=10, sticky="ew")
 
 tk.Button(mem_frame, text="M+", width=5, command=lambda: memory_add(float(entry1.get() or 0))).grid(row=0, column=0)
 tk.Button(mem_frame, text="M-", width=5, command=lambda: memory_subtract(float(entry1.get() or 0))).grid(row=0, column=1)
