@@ -66,6 +66,7 @@ def memory_recall():
 def memory_clear():
     global memory
     memory = 0.0
+    mem_label.config(text=f"M = {memory}")
     messagebox.showinfo("Memory", "Memory cleared (M = 0)")
 
 # -----------------------------
