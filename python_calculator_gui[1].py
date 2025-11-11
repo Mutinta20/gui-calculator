@@ -70,6 +70,12 @@ def memory_clear():
     memory = 0.0
     mem_label.config(text=f"M = {memory}")
     messagebox.showinfo("Memory", "Memory cleared (M = 0)")
+#CHANGE: safer number retrieval for empty/invalid entries
+def safe_get_entry(entry):
+    try:
+        return float(entry.get())
+    except (ValueError, TypeError):
+        return 0.0
 
 # -----------------------------
 # Calculator Logic
