@@ -136,8 +136,10 @@ entry2 = tk.Entry(root)
 entry2.pack()
 
 # Operation buttons
-frame = tk.Frame(root)
-frame.pack(pady=10)
+ops = ttk.Frame(main_frame)
+ops.grid(row=2, column=0, columnspan=2, pady=12, sticky="ew")
+for c in range(4):
+    ops.columnconfigure(c, weight=1)
 
 tk.Button(frame, text="+", width=15, command=lambda: calculate("+")).grid(row=0, column=0)
 tk.Button(frame, text="-", width=15, command=lambda: calculate("-")).grid(row=0, column=1)
