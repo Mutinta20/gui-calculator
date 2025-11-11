@@ -141,14 +141,14 @@ ops.grid(row=2, column=0, columnspan=2, pady=12, sticky="ew")
 for c in range(4):
     ops.columnconfigure(c, weight=1)
 
-tk.Button(frame, text="+", width=15, command=lambda: calculate("+")).grid(row=0, column=0)
+tk.Button(frame, text="√", width=15, command=lambda: calculate("+")).grid(row=0, column=0)
 tk.Button(frame, text="-", width=15, command=lambda: calculate("-")).grid(row=0, column=1)
 tk.Button(frame, text="*", width=15, command=lambda: calculate("*")).grid(row=0, column=2)
 tk.Button(frame, text="/", width=15, command=lambda: calculate("/")).grid(row=0, column=3)
 tk.Button(frame, text="%", width=15, command=lambda: calculate("%")).grid(row=0, column=4)
 
 tk.Button(frame, text="^", width=15, command=lambda: calculate("^")).grid(row=1, column=0)
-tk.Button(frame, text="√", width=15, command=lambda: calculate("√")).grid(row=1, column=1)
+tk.Button(frame, text="+", width=15, command=lambda: calculate("√")).grid(row=1, column=1)
 
 # Result display
 result_label = tk.Label(root, text="Result: ")
@@ -156,7 +156,7 @@ result_label.pack(pady=15)
 
 # History display
 tk.Label(root, text="Calculation History:").pack()
-history_text = tk.Text(root, height=10, width=50)
+history_text = tk.Text(root, height=5, width=50)
 history_text.pack()
 
 tk.Button(root, text="Clear History", command=clear_history).pack(pady=5)
@@ -166,10 +166,10 @@ tk.Button(root, text="Clear History", command=clear_history).pack(pady=5)
 mem_frame = ttk.LabelFrame(root, text="Memory Functions", padding=8)
 mem_frame.pack(pady=10, fill="x", padx=10) # Use pack and fill to make it look nice
 
-tk.Button(mem_frame, text="M+", width=5, command=lambda: memory_add(float(entry1.get() or 0))).grid(row=0, column=0)
-tk.Button(mem_frame, text="M-", width=5, command=lambda: memory_subtract(float(entry1.get() or 0))).grid(row=0, column=1)
-tk.Button(mem_frame, text="MR", width=5, command=memory_recall).grid(row=0, column=2)
-tk.Button(mem_frame, text="MC", width=5, command=memory_clear).grid(row=0, column=3)
+tk.Button(mem_frame, text="M+", width=2.5, command=lambda: memory_add(float(entry1.get() or 0))).grid(row=0, column=0)
+tk.Button(mem_frame, text="M-", width=2.5, command=lambda: memory_subtract(float(entry1.get() or 0))).grid(row=0, column=1)
+tk.Button(mem_frame, text="MR", width=2.5, command=memory_recall).grid(row=0, column=2)
+tk.Button(mem_frame, text="MC", width=2.5, command=memory_clear).grid(row=0, column=3)
 
 # Exit button (button)
 ttk.Button(main_frame, text="Exit", command=root.destroy).grid(row=7, column=0, columnspan=2, pady=10)
