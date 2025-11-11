@@ -130,18 +130,18 @@ entry2.pack()
 frame = tk.Frame(root)
 frame.pack(pady=10)
 
-tk.Button(frame, text="+", width=5, command=lambda: calculate("+")).grid(row=0, column=0)
-tk.Button(frame, text="-", width=5, command=lambda: calculate("-")).grid(row=0, column=1)
-tk.Button(frame, text="*", width=5, command=lambda: calculate("*")).grid(row=0, column=2)
-tk.Button(frame, text="/", width=5, command=lambda: calculate("/")).grid(row=0, column=3)
-tk.Button(frame, text="%", width=5, command=lambda: calculate("%")).grid(row=0, column=4)
+tk.Button(frame, text="+", width=15, command=lambda: calculate("+")).grid(row=0, column=0)
+tk.Button(frame, text="-", width=15, command=lambda: calculate("-")).grid(row=0, column=1)
+tk.Button(frame, text="*", width=15, command=lambda: calculate("*")).grid(row=0, column=2)
+tk.Button(frame, text="/", width=15, command=lambda: calculate("/")).grid(row=0, column=3)
+tk.Button(frame, text="%", width=15, command=lambda: calculate("%")).grid(row=0, column=4)
 
-tk.Button(frame, text="^", width=5, command=lambda: calculate("^")).grid(row=1, column=0)
-tk.Button(frame, text="√", width=5, command=lambda: calculate("√")).grid(row=1, column=1)
+tk.Button(frame, text="^", width=15, command=lambda: calculate("^")).grid(row=1, column=0)
+tk.Button(frame, text="√", width=15, command=lambda: calculate("√")).grid(row=1, column=1)
 
 # Result display
 result_label = tk.Label(root, text="Result: ")
-result_label.pack(pady=10)
+result_label.pack(pady=15)
 
 # History display
 tk.Label(root, text="Calculation History:").pack()
