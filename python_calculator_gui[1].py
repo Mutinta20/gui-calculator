@@ -119,11 +119,11 @@ root.title("Python Calculator (Advanced)")
 root.geometry("450x600")
 
 # Input fields
-tk.Label(root, text="Enter second number:").pack()
+tk.Label(root, text="Enter second number(if needed):").pack()
 entry1 = tk.Entry(root)
 entry1.pack()
 
-tk.Label(root, text="Enter first number (if needed):").pack()
+tk.Label(root, text="Enter first number :").pack()
 entry2 = tk.Entry(root)
 entry2.pack()
 
