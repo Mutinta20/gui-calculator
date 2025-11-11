@@ -159,9 +159,10 @@ history_text.pack()
 
 tk.Button(root, text="Clear History", command=clear_history).pack(pady=5)
 
-# Memory buttons
-mem_frame = ttk.LabelFrame(main_frame, text="Memory Functions", padding=8)
-mem_frame.grid(row=6, column=0, columnspan=2, pady=10, sticky="ew")
+#  Memory buttons
+# FIX: Changed parent from undefined 'main_frame' to 'root', and changed .grid() to .pack()
+mem_frame = ttk.LabelFrame(root, text="Memory Functions", padding=8)
+mem_frame.pack(pady=10, fill="x", padx=10) # Use pack and fill to make it look nice
 
 tk.Button(mem_frame, text="M+", width=5, command=lambda: memory_add(float(entry1.get() or 0))).grid(row=0, column=0)
 tk.Button(mem_frame, text="M-", width=5, command=lambda: memory_subtract(float(entry1.get() or 0))).grid(row=0, column=1)
