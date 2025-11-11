@@ -160,7 +160,7 @@ tk.Button(mem_frame, text="M-", width=5, command=lambda: memory_subtract(float(e
 tk.Button(mem_frame, text="MR", width=5, command=memory_recall).grid(row=0, column=2)
 tk.Button(mem_frame, text="MC", width=5, command=memory_clear).grid(row=0, column=3)
 
-# Exit button
+# Exit button (button)
 tk.Button(root, text="Exit", command=root.destroy).pack(pady=10)
 
 # Run the GUI
